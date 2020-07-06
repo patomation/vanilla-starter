@@ -5,8 +5,12 @@ let ctx: CanvasRenderingContext2D
 
 const color = 'green'
 
-export function initCanvas () {
-  canvas = document.getElementById('canvas') as HTMLCanvasElement
+export function initCanvas (canvasInstance: HTMLCanvasElement) {
+  if (canvasInstance) {
+    canvas = canvasInstance
+  } else {
+    canvas = document.getElementById('canvas') as HTMLCanvasElement
+  }
   ctx = canvas.getContext('2d') as CanvasRenderingContext2D
   // Start drawing canvas every frame
   drawCanvas()
