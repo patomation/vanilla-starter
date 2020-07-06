@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = {
   entry: './src/index.ts',
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   cache: true,
   optimization: {
     removeAvailableModules: false,
@@ -23,6 +23,7 @@ module.exports = {
         use: {
           loader: 'ts-loader',
           options: {
+            configFile: 'tsconfig.browser.json',
             transpileOnly: true, // optimizes build performance
             experimentalWatchApi: true // optimizes build performance
           }
