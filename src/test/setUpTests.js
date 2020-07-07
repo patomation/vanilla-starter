@@ -18,3 +18,4 @@ dom.window.document.createElement = () => {
 global.window = dom.window
 global.document = dom.window.document
 global.Image = dom.window.Image
+global.KeyboardEvent = dom.window.KeyboardEvent
