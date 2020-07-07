@@ -5,12 +5,8 @@ let ctx: CanvasRenderingContext2D
 
 const color = 'green'
 
-export function initCanvas (canvasInstance: HTMLCanvasElement) {
-  if (canvasInstance) {
-    canvas = canvasInstance
-  } else {
-    canvas = document.getElementById('canvas') as HTMLCanvasElement
-  }
+export function initCanvas (): void {
+  canvas = document.getElementById('canvas') as HTMLCanvasElement
   ctx = canvas.getContext('2d') as CanvasRenderingContext2D
   // Start drawing canvas every frame
   drawCanvas()
@@ -79,7 +75,9 @@ export function drawImage (url: string, x: number, y: number) {
 const shapes = []
 const images: Sprite[] = []
 
-export function drawCanvas () {
+const isPaused = false
+
+export function drawCanvas (): void {
   clearCanvas()
   // draw images
   console.log('images.length', images.length)
@@ -91,7 +89,9 @@ export function drawCanvas () {
   // Draw shapes
   // console.log('fps tick')
   // Call itself
-  window.requestAnimationFrame(drawCanvas)
+  if (!isPaused) {
+    window.requestAnimationFrame(drawCanvas)
+  }
 }
 
 /**
