@@ -3,6 +3,7 @@
     "arrowdown",
     "arrowleft",
     "arrowright",
-    "arrowup"
+    "arrowup",
+    "snabbdom"
   ]
 }

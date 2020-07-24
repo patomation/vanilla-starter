@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfigs/browser-module",
+  "extends": "tsconfigs/browser-executable",
   "compilerOptions": {
     "outDir": "build"
   },
