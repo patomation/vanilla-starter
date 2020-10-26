@@ -4,7 +4,7 @@ const { titleCase } = require('title-case')
 const pkg = require('./package.json')
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.js',
   module: {
     rules: [
       {
